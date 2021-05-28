@@ -1,2 +1,4 @@
 # satyam_ecomm
- ecommerce frontend website
+ ecommerce frontend website with shopping cart
+ 
+  https://satyamtomar.github.io/satyam_ecomm/
