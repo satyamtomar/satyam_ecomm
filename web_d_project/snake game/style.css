@@ -1,0 +1,81 @@
+canvas
+{
+	background-size: cover;
+	
+	position: absolute;
+	top: 150px;
+	background-color: #1FE80A;
+}
+body
+{
+	background-color: #00FFD8;
+	background-opacity: 0.3;
+
+}
+#main
+{
+	width: 400px;
+	height: 500px;
+	left: 37%;
+	position: relative;
+    display: inline-block;
+
+}
+#popup
+{
+	position: absolute;
+	left: 40%;
+    text-align: center;
+	margin-top: -20%;
+	display: none;
+	font-size: 35px;
+	font-family: Impact, Charcoal, sans-serif;
+	font-weight: bold;
+    color: #FF0000;
+
+}
+#img
+{
+   padding-top: 20px;
+  position: relative;
+}
+#image
+{
+	
+}
+#score
+{
+    position: absolute;
+    left: 46px;
+    margin-top: -34px;
+	font-size: 25px;
+	font-family: Impact, Charcoal, sans-serif;
+}
+#butt
+{
+	float: right;
+    display: block;
+  margin-top: 5px;
+}
+
+#intro
+{
+	font-family: "biorhyme";
+	font-weight: bold;
+	font-size: 35px;
+	margin-bottom: 50px;
+	box-shadow: 0px 0px 2px 2px red;
+	text-align: center;
+	color: #B400FF;
+	background-color: #00FF9C;
+}
+#btn
+{
+	width: 50px;
+	height: 30px;
+	background:linear-gradient(45deg,yellow,orange);
+	color: white;
+font-size: 20px;
+text-align: center;
+font-family: tahoma;
+}

@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pangolin&family=Teko&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+		.center,.contents
+{
+	position: fixed;
+	background-color: white;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.contents
+{
+	display: none;
+}
+#click
+{
+	display: none;
+
+}
+.click-me
+{
+	display: none;
+	width: 160px;
+    height: 50px;
+    background:#27ae60; 
+    border:1px solid #26a65b;
+    color: white;
+    text-align:center;
+    font-size:22px;
+    line-height: 50px;
+    border-radius: 3px;
+    cursor:pointer;
+}
+.click-me:hover
+{
+	background:#219150;
+}
+.contents
+{   opacity: 0;
+	
+	width:400px;
+	height:350px;
+	background-color:white;
+	border-radius: 3px;
+	transition: .3s ease-in;
+	box-shadow: 0 2px 12px 0 rgba(0,0,0,.4);
+
+}
+#click:checked ~ .content
+{
+	opacity: 1;
+	visibility: visible;
+}
+.header
+{
+	height:68px;
+	background:#27ae60;
+	overflow: hidden;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.2);
+}
+.header h2 {
+    color: #FFEE8D;
+    /* color: white; */
+    padding-left: 32px;
+    font-weight: bold;
+    text-align: left;
+}
+.fa-times
+{
+	position: absolute;
+	right: 20px;
+	top:20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.fa-check
+{
+	font-size: 50px;
+	color:#27ae60;
+	font-weight: bold;
+	height: 80px;
+	width: 80px;
+	position:relative;left:-70px;
+	top:0px;
+	border:1px solid #27ae60;
+	text-align:center;
+	padding-top:13px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	margin: 30px 0 0 160px;
+}
+.fa-check:before {
+    content: "\f00c";
+    font-size: 50px;
+    
+}
+.fa-remove:before, .fa-close:before, .fa-times:before {
+    content: "\f00d";
+    font-size: 25px;
+    color: white;
+}
+#info
+{
+	padding-top: 10px;
+	font-size: 23px;
+	color:#1a1a1a;
+	text-align:center;
+}
+.line
+{
+	bottom:60px;
+	width:100%;
+	height:1px;
+	background: silver;
+}
+.close-btn
+{
+	position:absolute;
+
+	bottom:12px;
+	right:25px;
+	border:1px solid #27ae60;
+    border-radius: 3px;
+    color: #27ae60;
+    padding:8px 10px;
+    font-size:18px;
+    cursor:pointer;    
+
+}
+.close-btn:hover
+{
+	background:#27ae60;
+	color: white;
+	transition: .5s;
+}
+#products.active .contents
+{
+	filter: none;
+}
+#products.active,#no.active,#bitt.active
+{
+	filter:blur(10px);
+	
+}
+footer
+{
+	color:white;
+	background:black;
+	font-family: 'Questrial', sans-serif;
+	letter-spacing:1.5px;
+	text-align: center;
+}
+#contact {
+    margin: 10px 30px 2px 400px;
+    width: 200px;
+    /* margin-left: 300px; */
+    position: relative;
+    left: 70px;
+    top: 30px;
+}
+#links {
+    width: 250px;
+    display: inline-block;
+    position: relative;
+    left: 644px;
+    top: -124px;
+}
+		.desc
+		{
+			height: 450px;
+			margin-top: 40px;
+			width:  1000px;
+		}
+		.d-block
+		{
+			height: 450px;
+			width: 300px;
+		}
+        .single-product
+        {float: left;
+        	
+        } 
+		.new-arrival
+		{
+          background:green;
+          width:50px;
+          color:#fff;
+          font-size: 12px;
+          font-weight:bold;
+          margin-top: 20px;
+		}
+		.col-md-7
+		{
+			color:#555;
+            float: left;
+		}
+		 #price
+		{
+			font-size: 22px;
+			font-weight: bold;
+			color: orange;
+		   padding-top: 0px;
+            margin-top: -6px;
+		}
+		.description
+		{
+			margin-left: 100px;
+		}
+		.btn-primary
+		{
+			color: #fff;
+			font-size:15px;
+			margin-left: 20px;
+			border:none;
+			box-shadow:none !important;
+		}
+		#bottom
+{
+	margin-top: 30px;
+	background-color: black;
+	height: 190px;
+}
+#links ul li a{
+	font-size: 20px;
+	color: white;
+}
+h3{
+	color: wheat;
+}
+#contact
+{
+	margin: 10px 30px 2px 400px;
+	width: 200px;
+
+}
+#contact a
+{
+	color: white;
+}
+		 input
+		{
+			border:1px solid #ccc;
+			font-weight:bold;
+			height:33px;
+			width:30px;
+			text-align:center;
+		}
+		 #sat1
+		{
+			margin-top: 90px;
+			color: orange;
+
+		}
+		#sat2
+		{
+			margin:30px;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size: 20px;
+		}
+		#sat3
+		{
+			margin-bottom: 50px;
+		}
+		#sat4
+		{
+			color: orange;
+		}
+	#top
+{
+	position: fixed;
+	border: 2px solid red;
+	background-color: black;
+	opacity: 0.9999;
+	color: white;
+	/*background-attachment: fixed;*/
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 50px;
+	margin-bottom: 200px;
+	z-index: 1;
+}
+#top a{
+	font-size:30px;
+	color:#00ffff;
+	font-family: 'Teko', sans-serif;
+	letter-spacing:1.5px;
+}
+#numbers
+{
+	width: 15px;
+	height: 15px;
+	border-radius: 20px;
+	background-color: red;
+	float: right;
+	margin-top: -0px;
+	margin-left: -8px;
+text-align: center;
+	font-size: 14px;
+	font-family: 'Lobster', cursive;
+	color: white;
+	font-weight: bold;
+	
+/* 	position: relative; */
+}
+#top ul li{
+	display: inline-block;
+}
+.inline
+{
+	display: inline-block;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+}
+#span{
+	position: absolute;
+	left: 500px;
+	font-size: 35px;
+	font-family: 'Pangolin', cursive;
+}
+#top ul
+{
+	text-decoration: none;
+	display: inline-block;
+	position: absolute;
+	right: 2px;
+	top: -13px;
+}
+#links
+{
+	
+	width: 250px;
+	display: inline-block;
+	
+}
+#links ul
+{
+	list-style-type: none;
+}
+#links a
+{
+	font-size: 30px;
+	color: white;
+	border: none;
+	
+	
+}
+#links ul li a i
+{
+	position: absolute;
+	right: 100px;
+}
+a
+{
+	padding: 2px 10px 2px 10px;
+	text-decoration: none;
+	font-size: 25px;
+	margin-right: -5px;
+}
+#image-container
+		{
+			margin:20px 30px 30px 20px;
+			border:2px solid black;
+			display: flex;
+		}
+#two,#three,#four
+		{
+			display: none;
+		}
+#abc
+{
+    position: absolute;
+   left: 340px;
+	  margin-top: -195px;
+	font-size:30px;
+	text-decoration: none;
+	font-weight: 1000;
+	border-radius: 30px;
+	opacity: 0.34;
+}
+#def
+{
+    position: absolute;
+    left: 40px;
+	  margin-top: -195px;
+	font-size:30px;
+	text-decoration: none;
+	font-weight: 1000;
+	border-radius: 30px;
+	opacity: 0.34;
+}
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    height: 35px;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+   display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+    background: linear-gradient(89deg,#00c4ff,#fff700);
+    font-family: 'Domine', serif;
+}
+.content-section
+{
+	border: 2px solid red;
+	padding-left: 10px;
+	margin-top: 5px;
+	display: none;
+}
+a{
+	cursor: pointer;
+	border: none;
+}
+.fa-star,.fa-star-half
+{
+	position: relative;
+	margin-right: 2px;
+	margin-bottom: 10px;
+	color: orange;
+	top: -10px;
+}
+.shop-item-button
+{
+	position: relative;
+	margin-bottom: 10px;
+	top: 10px;
+	background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+	background-size: 400%;
+	border-radius: 30px;
+	width: 150px;
+	height: 35px;
+	font-size: 17px;
+	font-family: sans-serif;
+	color: white;
+	font-weight: bold;
+}
+.shop-item-button:hover
+{
+	animation:animate 6s linear infinite;
+}
+body
+{
+	background: white;
+}
+@keyframes animate
+{
+	0%{
+		background-position: 0%;
+	}
+	100%{
+		background-position: 400%;
+	}
+}
+ img
+{
+	margin: 15px;
+}
+a
+{
+	cursor: pointer;
+}
+#top img
+{
+	margin: 0px;
+}
+button
+{
+	cursor: pointer;
+}
+.inline img:hover{
+   transform: scale(1.1);
+}
+.trapezoid {
+	border-bottom: 50px solid #FFC706;
+	border-left: 0px solid transparent;
+	border-right: 35px solid transparent;
+	height: 0;
+	width: 155px;
+	font-weight: bold;
+
+    transform:rotateX(180deg);
+    text-align:center;
+}
+#p
+{
+   position:relative;
+   top:0px;
+   font-family: 'Merriweather Sans', sans-serif;
+     transform:rotateX(180deg);
+     font-size: 25px;
+     color:white;
+}
+	</style>
+	<title>PRODUCT DETAILS</title>
+	
+	<link rel="shortcut icon" type="image/png" href="img/camera-icon.png"/>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	
+</head>
+<body>
+
+<div id="top">
+	<a  ><img src="logo.png" alt="image not displayed" width="50px" height="50px" onclick="setpitems();" ></a>
+	<span id="span">E-Commerce Website</span>
+	<ul>
+		<li><a href="#no" onclick="showcart();" class="shopping-cart"><i class="fa fa-shopping-cart"></i> <div id="numbers"></div></a></li>
+		<li><a href="#"> SignUp</a></li>
+		<li><a href="#">login</a></li>
+	</ul>
+</div>
+<div class="desc"  id="products1">
+<div class="single-product">
+				<div id="image-container">
+		<img src="tvnew12(a).jpg" width="370px" height="300px" id="one"  class="image-sliders">
+		<img src="tvnew12(b).png" width="370px" height="300px" id="two" class="image-sliders">
+		<img src="tvnew12.jpg" width="370px" height="300px" id="three" class="image-sliders shop-item-image">
+		
+	</div>
+	<button onclick="slidemobile(1);" id="abc"><center>></center></button>
+	<button  onclick="slidemobile(2);" id="def"><center><</center></button>
+
+		
+	
+		
+
+</div>
+<div class="col-md-7">
+     <p class="new-arrival text-center">NEW</p>
+     <h2 class="shop-item-title">TCL Series s 32inch HD LED Tv</h2>
+     <p>Product Code:IRS</p>
+	<i class="fa fa-star"></i>
+	<i class="fa fa-star"></i>
+	<i class="fa fa-star"></i>
+	<i class="fa fa-star"></i>
+	
+
+	<p id="price" > PRICE: ₹ <span class="shop-item-price">35,000</span></p>
+	
+	<p><b>Availability:</b>In Stock</p>
+	<p><b>Condition:</b>New</p>
+	<p><b>Brand:</b>TCL Series </p>
+	<label>Quantity:</label>
+	<input type="text" value="1"><br>
+	<button id="button" class="shop-item-button" class="shop-item-cart" onclick="addToCartClicked(0);"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+
+	</div>
+</div>
+<div class="pd">
+<div class="container">
+	<div class="trapezoid "><p id="p">Details</p></div>
+	<p id="sat2">Vivo S1 comes powered by Qualcomm Snapdragon MediaTek Helio P65 octa-core processor. The smartphone runs on FunTouch OS9 based on Android 9.0 Pie operating system. </p>
+<hr id="sat3">
+</div>
+<div class="similar"  id="products">
+	<h1 id="sat4"><div class="trapezoid "><p id="p">Similar</p></div> </h1>
+
+        <div class="inline"><img src="tv8.webp" width="400px" height="300px" class="shop-item-image"><p class="shop-item-title">SONY VISUAL HD TV</p><p class="shop-item-price">25,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+		<br><button id="button" class="shop-item-button" class="shop-item-cart" onclick="addToCartClicked(1);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+
+		 <div class="inline"><img src="tv10.jpg" width="400px" height="300px" class="shop-item-image"><p class="shop-item-title">Sony Bravia 80cm LED TV</p><p class="shop-item-price">40,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+		<br><button id="button" class="shop-item-button" class="shop-item-cart" onclick="addToCartClicked(2);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		
+		<div class="inline"><img src="tvnew6.jpg" height="300px" width="400px"class="shop-item-image"><p class="shop-item-title">Samsung Smart curved uhd 32inch TV</p><p class="shop-item-price">31,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+		<br><button id="button" class="shop-item-button" class="shop-item-cart" onclick="addToCartClicked(3);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		
+		
+		
+	</div>
+</div>
+</div>
+<section class="container content-section" id="no">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">₹0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button"
+             onclick="purchaseClicked()" >PURCHASE</button>
+</section>
+<div id="bottom">
+	<div id="contact">
+		<center><h3>Contact</h3></center>
+		<ul>
+			<li><a href="#"> About us</a></li>
+			<li><a href="#"> contact us</a></li>
+		</ul>
+	</div>
+	<div id="links">
+		<center><h3>Social Media</h3></center>
+		<ul>
+   			<li><a href="https://www.google.com">Facebook </a><a href="https://www.google.com"><i class="fa fa-facebook"></i> </a></li>
+   			<li><a href="https://www.google.com">Google</a><a href="https://www.google.com"><i class="fa fa-google-plus"></i> </a></li>
+   			<li><a href="https://www.google.com">Twitter</a><a href="https://www.google.com"><i class="fa fa-twitter"></i> </a></li>
+   			<li><a href="https://www.google.com">Instagram </a><a href="https://www.google.com"><i class="fa fa-instagram"></i> </a></li>
+   			<li><a href="https://www.google.com">Youtube<a href="https://www.google.com"><i class="fa fa-youtube"></i> </a></li>
+   		</ul>
+	</div>
+</div>
+<footer>
+	 CopyRights Preserved &copy; 2020.
+</footer>
+</div>
+<div class="center">
+  
+ 
+   <div class="contents">
+   	<div class="header">
+   		<h2>Thank you</h2>
+        <label for="click" class="fa fa-times" onclick="closepurchase();"></label>
+    </div>
+    <center><i class="fa fa-check"></i></center>
+    <p id="info">Your order has been placed successfully </p>
+    <div class="line"></div>
+    <label for="click" class="close-btn"  id="close1" onclick="closepurchase1();">Close</label>
+   </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	{
+         document.getElementById("numbers").innerHTML=localStorage.getItem("textvalues");
+         document.getElementById("no").innerHTML=localStorage.getItem("cartvalues");    
+   }
+
+function toggle()
+      {
+      	
+        var blur=document.getElementById('products');
+        var blur1=document.getElementById('no');
+        var blur2=document.getElementById('products1');
+        blur.classList.toggle('active');
+        blur1.classList.toggle('active');
+        blur2.classList.toggle('active');
+          var x=document.getElementsByClassName('contents');
+           x[0].style.display="block";
+            x[0].style.opacity="1";
+      }
+      function closepurchase1()
+      {
+       
+        var x=document.getElementsByClassName('contents');
+           x[0].style.display="none";
+           var blur=document.getElementById('products');
+        var blur1=document.getElementById('no');
+        var blur2=document.getElementById('products1');
+        blur.classList.toggle('active');
+        blur1.classList.toggle('active');
+        blur2.classList.toggle('active');
+
+      }
+       function closepurchase()
+      {
+       var blur=document.getElementById('products');
+        var blur1=document.getElementById('no');
+        var blur2=document.getElementById('products1');
+        blur.classList.toggle('active');
+        blur1.classList.toggle('active');
+        blur2.classList.toggle('active');
+        var x=document.getElementsByClassName('contents');
+           x[0].style.display="none";
+
+      }
+
+	var tracerm=1;
+		var one=document.getElementById("one");
+		var two=document.getElementById("two");
+		var three=document.getElementById("three");
+		function slidemobile(j)
+		{
+            if(j==1)
+            {
+            	if(tracerm==3)
+            	{
+            		tracerm=1;
+            	}
+            	else
+            	tracerm++;
+            	if(tracerm==1)
+            	{
+            		one.style.display="block";
+            		two.style.display="none";
+            		three.style.display="none";
+            		// alert("hello");
+            	}
+            	else if(tracerm==2)
+            	{
+            		one.style.display="none";
+            		two.style.display="block";
+            		three.style.display="none";
+            		// alert("hello");
+            	}
+            	else if(tracerm==3)
+            	{
+            		one.style.display="none";
+            		two.style.display="none";
+            		three.style.display="block";
+            		// alert("hello");
+            	}
+            }
+            if(j==2)
+            {
+            	if(tracerm==1)
+            	{
+            		tracerm=3;
+            	}
+            	else
+            	tracerm--;
+            	if(tracerm==1)
+            	{
+            		one.style.display="block";
+            		two.style.display="none";
+            		three.style.display="none";
+            		// alert("hello");
+            	}
+            	else if(tracerm==2)
+            	{
+            		one.style.display="none";
+            		two.style.display="block";
+            		three.style.display="none";
+            		// alert("hello");
+            	}
+            	else if(tracerm==3)
+            	{
+            		one.style.display="none";
+            		two.style.display="none";
+            		three.style.display="block";
+            		// alert("hello");
+            	}
+            }
+		}
+		if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready);
+} else {
+    ready();
+}
+
+// document.getElementById('images').addEventListener("load",back());
+// function back()
+// {
+// 	alert("back loaded");
+// }
+function setpitems()
+{
+    var divvalue=document.getElementById("numbers").innerHTML;
+    localStorage.setItem("textvalues",divvalue);
+    var cartitems=document.getElementById("no").innerHTML;
+    localStorage.setItem("cartvalues",cartitems);
+   localStorage.setItem("loadew",'1');
+
+    window.location.href="index.html";
+}
+function ready() {
+    var removeCartItemButtons = document.getElementsByClassName('btn-danger');
+    for (var i = 0; i < removeCartItemButtons.length; i++) {
+        var button = removeCartItemButtons[i];
+        // button.addEventListener('click', removeCartItem);
+    }
+
+    var quantityInputs = document.getElementsByClassName('cart-quantity-input');
+    for (var i = 0; i < quantityInputs.length; i++) {
+        var input = quantityInputs[i];
+        input.addEventListener('change', quantityChanged);
+    }
+
+    var addToCartButtons = document.getElementsByClassName('shop-item-button');
+    for (var i = 0; i < addToCartButtons.length; i++) {
+        var button = addToCartButtons[i];
+        button.addEventListener('click', addToCartClicked);
+    }
+
+   
+}
+function addToCartClicked(x) {
+    // var button = event.target
+    // var shopItem = button.parentElement.parentElement
+    var title = document.getElementsByClassName('shop-item-title')[x].innerText;
+    var price = document.getElementsByClassName('shop-item-price')[x].innerText;
+    var imageSrc = document.getElementsByClassName('shop-item-image')[x].src;
+    addItemToCart(title, price, imageSrc,x);
+    changecarts(1);
+    updateCartTotal();
+}
+
+function addItemToCart(title, price, imageSrc,x) {
+    var cartRow = document.createElement('div');
+    cartRow.classList.add('cart-row');
+    var cartItems = document.getElementsByClassName('cart-items')[0];
+    var cartItemNames = document.getElementsByClassName('cart-item-title');
+    // for (var i = 0; i < cartItemNames.length; i++) {
+    //     if (cartItemNames[i].innerText == title) {
+    //         alert('This item is already added to the cart');
+    //         return
+    //     }
+    // }
+    var cartRowContents = `
+        <div class="cart-item cart-column">
+            <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+            <span class="cart-item-title">${title}</span>
+        </div>
+        <span class="cart-price cart-column">${price}</span>
+        <div class="cart-quantity cart-column">
+            <input class="cart-quantity-input" type="number" value="1" disabled>
+           <button class="btn btn-danger" type="button" onclick="removeCartItem(this)">REMOVE</button>
+        </div>`
+    cartRow.innerHTML = cartRowContents;
+    cartItems.append(cartRow);
+    // cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem);
+    cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged);
+}
+function updateCartTotal() {
+    var cartItemContainer = document.getElementsByClassName('cart-items')[0];
+    var cartRows = cartItemContainer.getElementsByClassName('cart-row');
+    var total = 0;
+    for (var i = 0; i < cartRows.length; i++) {
+        var cartRow = cartRows[i];
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0];
+        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
+        var price = parseFloat(priceElement.innerText.replace(',', ''));
+
+        var quantity = quantityElement.value;
+        total = total + (price * quantity);
+    }
+    total = Math.round(total * 100) / 100;
+    document.getElementsByClassName('cart-total-price')[0].innerText =  "₹"+" "+ total;
+
+    hello();
+}
+function purchaseClicked() {
+	
+    var cartItems = document.getElementsByClassName('cart-items')[0];
+    while (cartItems.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild);
+    }
+     var n=document.getElementById("numbers");
+     n.innerHTML='0';
+     sessionStorage.setItem('CartCount', 0);
+     toggle();
+       updateCartTotal();
+}
+
+function removeCartItem(event) {
+    var buttonClicked = event;
+    buttonClicked.parentElement.parentElement.remove();
+    changecarts(-1);
+    updateCartTotal();
+}
+
+function quantityChanged(event) {
+    var input = event.target.value;
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1;
+    }
+    updateCartTotal();
+}
+function changecarts(x)
+{
+     var n=document.getElementById("numbers");
+     sessionStorage.setItem('CartCount', parseInt(n.innerHTML)+x);
+     n.innerHTML=parseInt(n.innerHTML)+x;//sessionStorage.getItem('CartCount');
+}
+$('.shop-item-button').on('click', function () {
+        var cart = $('.shopping-cart');
+        var imgtodrag = $(this).parent('.inline').find(".shop-item-image").eq(0);
+        if (imgtodrag) {
+            var imgclone = imgtodrag.clone()
+                .offset({
+                top: imgtodrag.offset().top,
+                left: imgtodrag.offset().left
+            })
+                .css({
+                'opacity': '0.8',
+                    'position': 'absolute',
+                    'height': '150px',
+                    'width': '80px',
+                    'z-index': '100'
+            })
+                .appendTo($('body'))
+                .animate({
+                'top': cart.offset().top + 10,
+                    'left': cart.offset().left + 10,
+                    'width': 70,
+                    'height': 100
+            }, 1000, 'easeInOutExpo');
+            
+            setTimeout(function () {
+                cart.effect("shake", {
+                    times: 2
+                }, 200);
+            }, 1500);
+
+            imgclone.animate({
+                'width': 0,
+                    'height': 0
+            }, function () {
+                $(this).detach()
+            });
+        }
+    });   
+var yourcart=0;
+function showcart()
+{
+	var k=document.getElementsByClassName("content-section");
+  var m=document.getElementById("bitt");
+    if(yourcart==1)
+    {
+       k[0].style.display="none";
+       yourcart=0;
+       
+    }
+    else
+    {
+    	 k[0].style.display="block";
+       yourcart=1;
+    }
+    
+}
+</script>
+
+</html>
+
+

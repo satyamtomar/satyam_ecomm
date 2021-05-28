@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product Details</title>
+	<style type="text/css">
+		#image-container
+		{
+			border:2px solid black;
+			display: flex;
+		}
+		#container
+		{
+			margin-top: 40px;
+		}
+		#two,#three,#four
+		{
+			display: none;
+		}
+		#top
+{
+	position: fixed;
+	border: 2px solid red;
+	background-color: white;
+	/*background-attachment: fixed;*/
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	z-index: 1;
+}
+#container img
+{
+	border: 2px solid blue;
+}
+#abc
+{
+    position: absolute;
+   left: 230px;
+	  margin-top: -195px;
+	font-size:30px;
+	text-decoration: none;
+	font-weight: 1000;
+	border-radius: 30px;
+	opacity: 0.34;
+}
+#def
+{
+    position: absolute;
+    left: 40px;
+	  margin-top: -195px;
+	font-size:30px;
+	text-decoration: none;
+	font-weight: 1000;
+	border-radius: 30px;
+	opacity: 0.34;
+}
+#number
+{
+	width: 15px;
+	height: 15px;
+	border-radius: 20px;
+	background-color: yellow;
+	float: right;
+	margin-top: -30px;
+	margin-left: -8px;
+text-align: center;
+	font-size: 16px;
+	color: red;
+	font-weight: bold;
+	
+/* 	position: relative; */
+}
+#top ul li{
+	display: inline-block;
+}
+#span{
+	position: absolute;
+	left: 500px;
+	font-size: 35px;
+}
+#top ul
+{
+	text-decoration: none;
+	display: inline-block;
+	position: absolute;
+	right: 2px;
+	top: -13px;
+}
+#links
+{
+	
+	width: 250px;
+	display: inline-block;
+	position: absolute;
+}
+#links ul
+{
+	list-style-type: none;
+}
+#links a
+{
+	font-size: 30px;
+	color: white;
+	border: none;
+	
+	
+}
+#links ul li a i
+{
+	position: absolute;
+	right: 100px;
+}
+a
+{
+	padding: 2px 10px 2px 10px;
+	text-decoration: none;
+	font-size: 25px;
+	margin-right: -5px;
+}
+
+	</style>
+	
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="top">
+	<a ><img src="logo.png" alt="image not displayed" width="30px" height="30px"></a>
+	<span id="span">E-Commerce Website</span>
+	<ul>
+		<li><a href="#no" onclick="showcart();" class="shopping-cart"><i class="fa fa-shopping-cart"></i> <div id="number"></div></a></li>
+		<li><a href="#"> SignUp</a></li>
+		<li><a href="#">login</a></li>
+	</ul>
+</div>
+<div id="container">
+	<div id="image-container">
+		<img src="mobile2.png" width="300px" height="350px" id="one"  class="image-sliders">
+		<img src="mobile3.jpg" width="300px" height="350px" id="two" class="image-sliders">
+		<img src="mobile4.jpg" width="300px" height="350px" id="three" class="image-sliders">
+		<img src="mobile5.jpg" width="300px" height="350px" id="four" class="image-sliders">
+	</div>
+	<button onclick="slidemobile(1);" id="abc"><center>></center></button>
+	<button  onclick="slidemobile(2);" id="def"><center><</center></button>
+</div>
+</body>
+<script type="text/javascript">
+	var tracerm=1;
+		var one=document.getElementById("one");
+		var two=document.getElementById("two");
+		var three=document.getElementById("three");
+		var four=document.getElementById("four");
+		function slidemobile(j)
+		{
+            if(j==1)
+            {
+            	if(tracerm==4)
+            	{
+            		tracerm=1;
+            	}
+            	else
+            	tracerm++;
+            	if(tracerm==1)
+            	{
+            		one.style.display="block";
+            		two.style.display="none";
+            		four.style.display="none";
+            		three.style.display="none";
+            		// alert("hello");
+            	}
+            	else if(tracerm==2)
+            	{
+            		one.style.display="none";
+            		two.style.display="block";
+            		three.style.display="none";
+            		four.style.display="none";
+            		// alert("hello");
+            	}
+            	else if(tracerm==3)
+            	{
+            		one.style.display="none";
+            		two.style.display="none";
+            		three.style.display="block";
+            		four.style.display="none";
+            		// alert("hello");
+            	}
+            	else if(tracerm==4)
+            	{
+            		one.style.display="none";
+            		two.style.display="none";
+            		three.style.display="none";
+            		four.style.display="block";
+            		// alert("hello");
+            	}
+            }
+            if(j==2)
+            {
+            	if(tracerm==1)
+            	{
+            		tracerm=4;
+            	}
+            	else
+            	tracerm--;
+            	if(tracerm==1)
+            	{
+            		one.style.display="block";
+            		two.style.display="none";
+            		three.style.display="none";
+            		four.style.display="none";
+            		// alert("hello");
+            	}
+            	else if(tracerm==2)
+            	{
+            		one.style.display="none";
+            		two.style.display="block";
+            		three.style.display="none";
+            		four.style.display="none";
+            		// alert("hello");
+            	}
+            	else if(tracerm==3)
+            	{
+            		one.style.display="none";
+            		two.style.display="none";
+            		three.style.display="block";
+            		four.style.display="none";
+            		// alert("hello");
+            	}
+            	else if(tracerm==4)
+            	{
+            		one.style.display="none";
+            		two.style.display="none";
+            		three.style.display="none";
+            		four.style.display="block";
+            		// alert("hello");
+            	}
+            }
+		}
+</script>
+</html>

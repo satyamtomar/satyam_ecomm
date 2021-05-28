@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tic-tac-toe</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js" >
+	
+	</script>
+</head>
+<body>
+	<center>
+		<div id="Welcome">
+			Welcome to Tic-Tac-Toe
+		</div>
+	</center>
+	<center><div id="main">
+		<div id="o">O</div>
+		<div id="x">X</div>
+	</div></center>
+	<center><div id="result">
+		<div id="new1"></div>
+		<!-- <button onclick="playagain();" id="ok">OK</button> -->
+	</div></center>
+ <center> <table cellspacing="0px">
+  	<tr>
+  		<td onclick="disp(0);" class="box" ></td>
+  		<td onclick="disp(1);" class="box" ></td>
+  		<td onclick="disp(2);" class="box" ></td>
+  	</tr>
+  	<tr>
+  		<td onclick="disp(3);" class="box" ></td>
+  		<td onclick="disp(4);" class="box"></td>
+  		<td onclick="disp(5);" class="box" ></td>
+  	</tr>
+  	<tr>
+  		<td onclick="disp(6);" class="box" ></td>
+  		<td onclick="disp(7);" class="box" ></td>
+  		<td onclick="disp(8);" class="box" ></td>
+  	</tr>
+  </table>
+</center>
+
+   <button onclick="playagain();" id="playagain">Play Again</button>
+</body>
+</html>

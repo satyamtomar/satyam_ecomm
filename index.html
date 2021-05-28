@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>e commerce website</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" type="image/png" href="img/camera-icon.png"/>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pangolin&family=Teko&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+<!--  -->
+</head>
+<body onload="load();" id="bdy">
+<div id="top">
+	<img src="logo.png" alt="image not displayed" width="50px" height="50px">
+	<span id="span">E-Commerce Website</span>
+	<ul>
+		<li><a href="#no" onclick="showcart();" class="shopping-cart"><i class="fa fa-shopping-cart"></i> <div id="number"></div></a></li>
+		<li><a href="./registration and login/321.html"> SignUp</a></li>
+		<li><a href="./registration and login/321.html">login</a></li>
+	</ul>
+</div>
+
+<div class="list">
+    <ul>
+            <li><a  id="ontop"><i class="fa fa-mobile"></i>Mobiles</a>
+                 <ul>
+			     <li><a href="#Mobile">REDMI</a></li>
+			       <li><a href="#Mobile">REALME</a></li>
+			       <li><a href="#Mobile">SAMSUNG</a></li>
+			       </ul>
+			 </li>
+			<li><a id="ontop"><i class="fa fa-television"></i>TV & Appliances</a>
+                  <ul>
+			      <li><a href="#TV">samsung</a></li>
+			        <li><a href="#TV">LG</a></li>
+			        <li><a href="#TV">SONY</a></li>
+			        </ul>
+			</li>
+		   <li><a id="ontop"><i class="fa fa-male"></i>MEN</a>
+                  <ul>
+			      <li><a href="#Shirts">T-shirts</a></li>
+			        <li><a href="#Shirts">Fashion dress</a></li>
+			        <li><a href="#Shirts">Branded</a></li>
+			        </ul>
+			</li>
+	       <li><a id="ontop"><i class="fa fa-cutlery"></i>Furnitures</a>
+				<ul>
+				  <li><a href="#Furnitures">SOFA</a></li>
+			      <li><a href="#Furnitures">DINING TABLE</a></li>
+				  <li><a href="#Furnitures">Kitchen appliances</a></li>				 
+				  </ul>
+			</li>
+		 <li><a id="ontop"><i class="fa fa-gamepad"></i>Gaming</a>
+				   <ul>
+				   <li><a href="#">snake</a></li>
+				   <li><a href="#">tic-tac-toe</a></li>				
+				   </ul>
+		 </li>
+	 </ul>
+	</div>
+		
+<center>
+<!-- <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> -->
+<div id="changeimage" >
+	<img src="theme8.png" width="100%" height="300px" id="image">
+</div>
+<a name="Mobile">
+<div id="products">
+	<fieldset>
+		<legend><div class="trapezoid"><p id="p">Mobiles</p></div></legend>
+		<div id="container" >
+			<div id="first">
+		<div class="inline"><a href="product.html"><img src="mobile1.webp" width="170px" class="shop-item-image" onclick="setitems();" id="firstimage"></a>
+			<p class="shop-item-title">Realme X</p><p class="shop-item-price">15,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button"  class="shop-item-button"onclick="addToCartClicked(0);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div class="inline"><a href="product1.html"><img src="mobilenew2.png" width="240px" height="350px" class="shop-item-image" onclick="setitems();">
+			</a><p class="shop-item-title">OPPO R15</p><p class="shop-item-price">21,999</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+		<br><button id="button" class="shop-item-button" class="shop-item-cart" onclick="addToCartClicked(1);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div class="inline"><a href="product2.html"><img src="mobilenew3.jpg" height="350px" width="180px"class="shop-item-image"  onclick="setitems();">
+		</a><p class="shop-item-title">Do Mobile Mate 2</p><p class="shop-item-price">9,999</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+		<br><button id="button" class="shop-item-button" class="shop-item-cart" onclick="addToCartClicked(2);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div class="inline"><a href="product3.html"><img src="mobilenew4.jpg" height="350px" width="270px"class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Xiaomi MI K20 PRO</p><p class="shop-item-price">20,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+		<br><button id="button" class="shop-item-button" class="shop-item-cart" onclick="addToCartClicked(3);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+	</div>
+	<div id="second">
+		<div  class="inline"><a href="product4.html"><img src="mobilenew5.jpg"  width="250px" height="350px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">VIVO S1</p><p class="shop-item-price">17,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(4);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div class="inline"><a href="product6.html"><img src="mobilenew8.jpeg"  width="300px" height="350px"class="shop-item-image" onclick="setitems();">
+	</a><p class="shop-item-title">Galaxy NOTE 10</p><p class="shop-item-price">40,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" class="shop-item-cart" onclick="addToCartClicked(5);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div class="inline"><a href="product5.html"><img src="mobile7.webp" width="300px" height="350px" class="shop-item-image" onclick="setitems();">
+	</a><p class="shop-item-title">Xiaomi MI 8 SE</p><p class="shop-item-price">16,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" class="shop-item-cart" onclick="addToCartClicked(6);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div class="inline"><a href="product3.html"><img src="mobilenew2(a).jpg"  width="300px" height="350px" class="shop-item-image" onclick="setitems();">
+	</a><p class="shop-item-title">Xiaomi MI K20 PRO</p><p class="shop-item-price">20,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" class="shop-item-cart" onclick="addToCartClicked(7);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+	</div>
+	<div id="third">
+		<div class="inline"><a href="product8.html"><img src="mobilenew9.png"  width="240px" height="350px" class="shop-item-image" id="firstimage" 
+			onclick="setitems();"></a><p class="shop-item-title">Lava Iris 405 PLUS</p><p class="shop-item-price">10,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" class="shop-item-cart" onclick="addToCartClicked(8);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div class="inline"><a href="product9.html"><img src="mobilenew10.png"  width="190px" height="350px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Sony Xperia J</p><p class="shop-item-price">12,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" class="shop-item-cart" onclick="addToCartClicked(9);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div class="inline"><a href="product10.html"><img src="mobilenew11.jpg"  width="220px" height="350px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Xiaomi MI 10 PRO</p><p class="shop-item-price">14,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" class="shop-item-cart" onclick="addToCartClicked(10);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div class="inline"><a href="product11.html"><img src="mobilenew12.jpg"  width="180px" height="350px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">REALME 6 PRO</p><p class="shop-item-price">18,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" class="shop-item-cart" onclick="addToCartClicked(11);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+	</div>
+	<button onclick="slidemobile(1);" id="abc"><center>></center></button>
+	<button  onclick="slidemobile(2);" id="def"><center><</center></button>
+
+		</div>
+	</fieldset>
+	<a name="TV">
+	<fieldset>
+		<legend><div class="trapezoid "><p id="p">Televisions</p></div></legend>
+	<div id="container">
+             <div id="fourth">
+		<div  class="inline"><a href="product12.html"><img src="tvnew1.jpg" width="300px" height="300px"class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Samsung  4K  UHD QLED TV</p><p class="shop-item-price">38,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(12);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div  class="inline"><a href="product13.html"><img src="tv10.jpg"  width="400px" height="300px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Sony Bravia 80cm LED Smart TV</p><p class="shop-item-price">40,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(13);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div  class="inline"><a href="product14.html"><img src="tvnew3(b).jpg" height="290px" width="380px"class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Sony Bravia 101.6 full HD LED TV</p><p class="shop-item-price">50,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(14);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+	</div>
+	<div id="fifth">
+		<div  class="inline"><a href="product15.html"><img src="tvnew6.jpg"  width="350px" height="350px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Samsung Smart Curved UHD 32inch TV</p><p class="shop-item-price">31,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(15);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div  class="inline"><a href="product16.html"><img src="tvnew7.png" width="400px" height="300px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Samsung Crown LED TV</p><p class="shop-item-price">45,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(16);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div  class="inline"><a href="product17.html"><img src="tv8.webp"  width="400px" height="320px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Sony NORMAL HD TV</p><p class="shop-item-price">25,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(17);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+	</div>
+	<div id="sixth">
+		<div  class="inline"><a href="product18.html"><img src="tvnew9.jpg"  width="380px" height="300px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Samsung Q Series 65 inch Ultra HD TV</p><p class="shop-item-price">35,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(18);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		
+		<div  class="inline"><a href="product19.html"><img src="tv11.jpg"  width="400px" height="300px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Samsung 65 inch Q LED TV</p><p class="shop-item-price">30,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(19);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div  class="inline"><a href="product20.html"><img src="tvnew12.jpg"  width="370px" height="300px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">TCL Series S 32 inch</p><p class="shop-item-price">35,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(20);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		</div>
+
+			<button onclick="slidetv(1);" id="abc"><center>></center></button>
+	        <button  onclick="slidetv(2);" id="def"><center><</center></button>
+		</div>
+	</fieldset>
+	<a name="Furnitures">
+	<fieldset>
+		<legend><div class="trapezoid "><p id="p">Furnitures</p></div></legend>
+		<div id="container">
+               <div id="seventh">
+		<div  class="inline"><a href="product21.html"><img src="sofa1.jpg" width="340px" height="300px"class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">3-Seater L-shaped Sofa set</p><p class="shop-item-price">30,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(21);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div  class="inline"><a href="product22.html"><img src="sofa2(a).webp"  width="440px" height="300px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Wooden Sofa set</p><p class="shop-item-price">32,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(22);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div  class="inline"><a href="product23.html"><img src="sofa3(a).jpg" height="290px" width="460px"class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Jodhpur Sofa set</p><p class="shop-item-price">25,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(23);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+	</div>
+	<div id="eigth">
+		<div  class="inline"><a href="product24.html"><img src="sofa6.jpg"  width="400px" height="300px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Living Room Set</p><p class="shop-item-price">25,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(24);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div  class="inline"><a href="product25.html"><img src="sofa7.jpg" width="430px" height="300px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Rest sofa set</p><p class="shop-item-price">35,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(25);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div  class="inline"><a href="product26.html"><img src="sofa8.jpg"  width="430px" height="300px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Nordic Style Sofa Set</p><p class="shop-item-price">30,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(26);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+	</div>
+	<div id="ninth">
+		<div  class="inline"><a href="product27.html"><img src="sofa9.jpg"  width="410px" height="300px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">L-Shaped Sofa set</p><p class="shop-item-price">25,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(27);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		
+		<div  class="inline"><a href="product28.html"><img src="sofa4.jpg"  width="400px" height="300px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Home Decor Sofa Set</p><p class="shop-item-price">30,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button  id="button"  class="shop-item-button" onclick="addToCartClicked(28);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		<div  class="inline"><a href="product29.html"><img src="sofa5.jpg"  width="400px" height="300px" class="shop-item-image" onclick="setitems();"></a><p class="shop-item-title">Plain Smooth Sofa Set</p><p class="shop-item-price">20,000</p>
+		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button" class="shop-item-button" onclick="addToCartClicked(29);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		</div>
+
+			<button onclick="slidesofa(1);" id="abc"><center>></center></button>
+	        <button  onclick="slidesofa(2);" id="def"><center><</center></button>
+		</div>
+	</fieldset>
+<a name="Shirts">
+	<fieldset>
+		<legend><div class="trapezoid "><p id="p">Shirts</p></div></legend>
+		<div id=tenth>
+			<div class="inline"><a href="product30.html"><img src="tshirt1.jpg"  id="a"  class="shop-item-image" onclick="setitems();"> </a><p class="shop-item-title">Taylor Swift T-Shirt</p><p class="shop-item-price">900</p>
+			<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button"  class="shop-item-button" onclick="addToCartClicked(30);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+			<div class="inline"><a href="product31.html"><img src="tshirt2.jpg"  id="b"  class="shop-item-image" onclick="setitems();"> </a> <p class="shop-item-title">Maroon Black Checked Shirt</p><p class="shop-item-price">1,500</p>
+			 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button"  class="shop-item-button" onclick="addToCartClicked(31);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+			<div class="inline"><a href="product32.html"><img src="tshirt3.jpg"  id="c"  class="shop-item-image" onclick="setitems();"> </a> <p class="shop-item-title">White Printed Round Neck T-Shirt</p><p class="shop-item-price">1,000</p>
+			<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button"  class="shop-item-button" onclick="addToCartClicked(32);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+			<div class="inline"><a href="product33.html"><img src="tshirt4.jpg"  id="d"  class="shop-item-image" onclick="setitems();"> </a> <p class="shop-item-title">Men's Red Slim Fit Shirt</p><p class="shop-item-price">800</p>
+			<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button"  class="shop-item-button" onclick="addToCartClicked(33);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+			<div class="inline"><a href="product34.html"><img src="tshirt5.jpg"  id="e"  class="shop-item-image" onclick="setitems();"> </a> <p class="shop-item-title">Rapido men maroon Printed Shirt</p><p class="shop-item-price">1,200</p>
+			<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+		<br><button id="button"  class="shop-item-button" onclick="addToCartClicked(34);"><i class="fa fa-shopping-cart"></i> Add To Cart</button></div>
+		</div>
+	</fieldset>
+</div>
+<section class="container content-section" id="no">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">₹0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button" onclick=" purchaseClicked()">PURCHASE</button>
+</section>
+<div id="bitt">
+<div id="features">
+	<div id="f1">
+		<img src="feature1.png">
+		<div class ="d1"><span>100% Original Items</span> are available at company</div>
+	</div>
+	<div id="f2">
+		<img src="feature2.webp">
+		<div class ="d1"><span>Return Within 30 Days</span>of Receiving Your order</div>
+	</div>
+	<div id="f3">
+		<img src="feature3.jpg">
+		<div class ="d1"><span>Get Free Delivery For Every </span>order on more than price</div>
+	</div>
+	<div id="f4">
+		<img src="feature4.png">
+		<div class ="d1"><span>Pay Online</span>Options(card/Net Banking)</div>
+	</div>
+</div>
+<div id="bottom">
+	<div id="contact">
+		<center><h6>Contact</h6></center>
+		<ul>
+			<li><a href="#">&nbsp;&nbsp;&nbsp;About us</a></li>
+			<li><a href="./contact us/form12.html">&nbsp;&nbsp;&nbsp;contact us</a></li>
+		</ul>
+	</div>
+	<div id="links">
+		<center><h3>Social Media</h3></center>
+		<ul>
+   			<li><a href="https://www.google.com">Facebook </a><a href="https://www.google.com"><i class="fa fa-facebook"></i> </a></li>
+   			<li><a href="https://www.google.com">Google</a><a href="https://www.google.com"><i class="fa fa-google-plus"></i> </a></li>
+   			<li><a href="https://www.google.com">Twitter</a><a href="https://www.google.com"><i class="fa fa-twitter"></i> </a></li>
+   			<li><a href="https://www.google.com">Instagram </a><a href="https://www.google.com"><i class="fa fa-instagram"></i> </a></li>
+   			<li><a href="https://www.google.com">Youtube<a href="https://www.google.com"><i class="fa fa-youtube"></i> </a></li>
+   		</ul>
+	</div>
+</div>
+<footer>
+	 CopyRights Preserved &copy; 2020.
+</footer>
+</div>
+<div class="center">
+  
+ 
+   <div class="contents">
+   	<div class="header">
+   		<h2>Thank you</h2>
+        <label for="click" class="fa fa-times" onclick="closepurchase();"></label>
+    </div>
+    <center><i class="fa fa-check"></i></center>
+    <p id="info">Your order has been placed successfully </p>
+    <div class="line"></div>
+    <label for="click" class="close-btn"  id="close1" onclick="closepurchase1();">Close</label>
+   </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="script.js" async></script>
+ <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+</html>
