@@ -1,4 +1,5 @@
 # satyam_ecomm
- ecommerce frontend website with shopping cart
+ Ecommerce website:
+                   Frontend website using javascript with add to cart functionality and animations. 
  
   https://satyamtomar.github.io/satyam_ecomm/
